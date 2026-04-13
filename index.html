@@ -538,7 +538,10 @@
 
         </div>
     </div>
-
+    <audio id="bgMusic" loop>
+        <source src="./YTDown.com_Shorts_itni-si-baat-hai-shorts-shortsfeed-hindi_Media_ZqbR-hxWoTA_009_128k.mp3"
+            type="audio/mpeg">
+    </audio>
     <!-- Interactivity & Animation Logic -->
     <script>
         // Particle Engine Setup
@@ -610,8 +613,11 @@
         // Reveal Logic
         const revealBtn = document.getElementById('revealBtn');
         const mainCard = document.getElementById('mainCard');
-
+        const music = document.getElementById('bgMusic');
         revealBtn.addEventListener('click', () => {
+            music.volume = 0.5; // optional
+            music.play();
+
             revealBtn.classList.add('hidden');
 
             // Dramatic burst of particles
